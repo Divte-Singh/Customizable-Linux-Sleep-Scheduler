@@ -1,4 +1,4 @@
-# Customize-Linux-Sleep-Scheduler
+# Customizable-Linux-Sleep-Scheduler
 
 A customizable Linux sleep monitoring application that provides a new and intelligent way to manage your system’s sleep behavior — helping you keep important work running without interruptions.
 
