@@ -1,24 +1,24 @@
 # Customize-Linux-Sleep-Scheduler
 
-A customizable Linux sleep monitoring application that automatically puts your system to sleep based on:
+A customizable Linux sleep monitoring application that provides a new and intelligent way to manage your system’s sleep behavior — helping you keep important work running without interruptions.
 
-- **User inactivity**
-- **CPU and RAM usage thresholds**
-- **Running whitelisted applications**
+This tool **prevents your computer from going to sleep** when:
+- **Whitelisted applications are running**
+- **CPU or RAM usage is above your defined thresholds**
+
+And it **automatically puts your system to sleep** when:
+- **You’re inactive**
+- **Resource usage is low**
+- **No important (whitelisted) apps are active**
+
+It's ideal for developers, researchers, or anyone who needs their system to stay awake when running critical tasks — all while saving power when idle.
 
 ## Features
 
-- GUI built with `tkinter`
 - Real-time CPU and RAM usage graph (via `matplotlib`)
 - Whitelist specific apps to prevent sleep
-- Adjustable idle time settings
-- Compatible with Linux
-  
-  ## Requirements
-
-- Python 3.7+
-- Linux OS
- 
+- Adjustable idle time and resource thresholds
+- Compatible with Linux 
 
 ## Installation
 
