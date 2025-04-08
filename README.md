@@ -23,6 +23,6 @@ It's ideal for developers, researchers, or anyone who needs their system to stay
 ## Installation
 
 ```bash
-git clone https://github.com/Divte-Singh/Customize-Linux-Sleep-Scheduler.git
+git clone https://github.com/Divte-Singh/Customize-Linux-Sleep-Scheduler
 cd Customize-Linux-Sleep-Scheduler
 pip install -r requirements.txt
