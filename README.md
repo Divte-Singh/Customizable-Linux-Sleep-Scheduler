@@ -12,7 +12,13 @@ A customizable Linux sleep monitoring application that automatically puts your s
 - Real-time CPU and RAM usage graph (via `matplotlib`)
 - Whitelist specific apps to prevent sleep
 - Adjustable idle time settings
-- Compatible with Linux 
+- Compatible with Linux
+  
+  ## Requirements
+
+- Python 3.7+
+- Linux OS
+ 
 
 ## Installation
 
