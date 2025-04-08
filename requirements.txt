@@ -1,0 +1,14 @@
+Requirement      Installation Command 
+
+1. Python        "sudo apt update"
+                 "sudo apt install python3 python3-pip"
+
+2. psutil        "pip install psutil"   
+3. pynput        "pip install pynput"
+4. matplotlib    "pip install matplotlib"
+
+
+Note:
+1. If you face issues running the app (especially related to tkinter or psutil), install these system packages
+"sudo apt update"&"sudo apt install python3-tk python3-psutil"
+Then proceed with the pip install commands.
