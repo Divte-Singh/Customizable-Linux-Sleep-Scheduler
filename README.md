@@ -18,7 +18,8 @@ It's ideal for developers, researchers, or anyone who needs their system to stay
 - Real-time CPU and RAM usage graph (via `matplotlib`)
 - Whitelist specific apps to prevent sleep
 - Adjustable idle time and resource thresholds
-- Compatible with Linux 
+- Compatible with Linux
+- **Includes a `run.sh` script** for one-step startup
 
 ## Installation
 
@@ -26,3 +27,5 @@ It's ideal for developers, researchers, or anyone who needs their system to stay
 git clone https://github.com/Divte-Singh/Customize-Linux-Sleep-Scheduler
 cd Customize-Linux-Sleep-Scheduler
 pip install -r requirements.txt
+chmod +x run.sh        # give execute permission
+./run.sh               # start the sleep monitor
