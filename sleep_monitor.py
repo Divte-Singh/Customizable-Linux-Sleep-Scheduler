@@ -78,7 +78,11 @@ def update_gui():
     cpu_usage = psutil.cpu_percent(interval=0.1)
     ram_usage = psutil.virtual_memory().percent
 
-    info_label.config(text=f"Time Left: {int(remaining_time)}s\nCPU Usage: {cpu_usage}%\nRAM Usage: {ram_usage}%")
+    info_label.config(
+        text=f"Time Left: {int(remaining_time)}s\n"
+             f"CPU Usage: {cpu_usage}%\n"
+             f"RAM Usage: {ram_usage}%"
+    )
     remaining_time_label.config(text=f"Remaining Time: {int(remaining_time)}s")
     root.after(1000, update_gui)
 
@@ -143,11 +147,11 @@ def update_graph(i):
     ax1.clear()
     ax2.clear()
 
-    ax1.plot(cpu_usage_list, label="CPU Usage (%)", color='r', marker='o', linestyle='dashed')
-    ax2.plot(ram_usage_list, label="RAM Usage (%)", color='b', marker='o', linestyle='dashed')
+    ax1.plot(cpu_usage_list, label="CPU Usage (%)", linestyle='dashed', marker='o')
+    ax2.plot(ram_usage_list, label="RAM Usage (%)", linestyle='dashed', marker='o')
 
-    ax1.axhline(CPU_THRESHOLD, color='r', linestyle='dashed', label="CPU Threshold")
-    ax2.axhline(RAM_THRESHOLD, color='b', linestyle='dashed', label="RAM Threshold")
+    ax1.axhline(CPU_THRESHOLD, linestyle='dashed', label="CPU Threshold")
+    ax2.axhline(RAM_THRESHOLD, linestyle='dashed', label="RAM Threshold")
 
     ax1.set_ylabel("CPU Usage (%)")
     ax2.set_ylabel("RAM Usage (%)")
@@ -161,10 +165,13 @@ def update_graph(i):
 
 root = tk.Tk()
 root.title("Sleep Monitor")
+
 info_label = tk.Label(root, text="Initializing...", font=("Arial", 14))
 info_label.pack()
+
 remaining_time_label = tk.Label(root, text="Remaining Time: --s", font=("Arial", 14))
 remaining_time_label.pack()
+
 root.after(1000, update_gui)
 
 tk.Button(root, text="Open Settings", command=open_settings).pack()
@@ -178,7 +185,7 @@ keyboard_listener.start()
 monitor_thread = threading.Thread(target=monitor_activity, daemon=True)
 monitor_thread.start()
 
-i = FuncAnimation(fig, update_graph, interval=1000)
+ani = FuncAnimation(fig, update_graph, interval=1000)
 plt.show(block=False)
 
 root.mainloop()
