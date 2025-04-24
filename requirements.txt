@@ -12,3 +12,4 @@ Note:
 1. If you face issues running the app (especially related to tkinter or psutil), install these system packages
 "sudo apt update"&"sudo apt install python3-tk python3-psutil"
 Then proceed with the pip install commands.
+2. Give the correct permissions to the run.sh file on Linux, you can use the following command:"chmod +x run.sh"
